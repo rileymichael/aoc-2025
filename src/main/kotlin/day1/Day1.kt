@@ -7,11 +7,11 @@ object Day1 : Puzzle<Sequence<Rotation>>(1) {
     override fun parse(input: Sequence<String>): Sequence<Rotation> = input.map(Rotation::parse)
 
     override fun part1(input: Sequence<Rotation>): Any = input.runningFold(
-        Dial(50), Dial::apply
+        Dial.INSTANCE, Dial::apply
     ).count { it.position == 0 }
 
     override fun part2(input: Sequence<Rotation>): Any = input.runningFold(
-        Dial(50), Dial::apply
+        Dial.INSTANCE, Dial::apply
     ).sumOf { it.zeroCount }
 }
 
@@ -33,6 +33,7 @@ data class Dial(
     }
 
     companion object {
+        val INSTANCE = Dial(50)
         private const val SIZE = 100
     }
 }
