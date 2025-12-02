@@ -1,10 +1,12 @@
 package com.github.rileymichael.aoc2025
 
 import com.github.rileymichael.aoc2025.day1.Day1
+import com.github.rileymichael.aoc2025.day2.Day2
 
 fun main() {
     val days = listOf(
         Day1,
+        Day2,
     )
     days.lastOrNull()?.run { solve() }
 }
