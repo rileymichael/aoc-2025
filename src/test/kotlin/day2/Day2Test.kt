@@ -15,12 +15,12 @@ class Day2Test {
 
     @Test
     fun `part 2 example`() {
-        assert(Day2.solve(Day2::part2, input) == TODO())
+        assert(Day2.solve(Day2::part2, input) == 4174379265)
     }
 
     @Test
     fun `part 2 solution`() {
-        assert(Day2.solve(Day2::part2) == TODO())
+        assert(Day2.solve(Day2::part2) == 38731915928)
     }
 
     companion object {
